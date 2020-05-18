@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Wheather-app</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:extra-light|Vast+Shadow" rel="stylesheet">
+    </head>
+    <body>
+        <div id="app">
+            <div class="app__container">
+                <h1 class="location">{{name}}</h1>
+                <div class="weather">
+                    <div class="weather__container-left">
+                        <img class="icon" src="images/sunny.svg"><div class="overcast">{{overcast}}</div>
+                        <span class="temperature">{{currentTemp}}</span>
+                    </div>
+                    <div class="weather__container-right">
+                        <span class="temperature__value">Min {{minTemp}}</span>
+                        <span class="temperature__value">Max {{maxTemp}}</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <img class="icon" src="images/sunrise.svg"><div class="info__value sunrise">{{sunrise}}</div> 
+                    <img class="icon" src="images/sunset.svg"><div class="info__value sunset">{{sunset}}</div> 
+                    <img class="icon" src="images/humidity.svg"><div class="info__value humidity">{{humidity}}</div> 
+                    <img class="icon" src="images/pressure.svg"><div class="info__value pressure">{{pressure}}</div> 
+                    <img class="icon" src="images/wind.svg"><div class="info__value wind">{{wind}}</div> 
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

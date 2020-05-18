@@ -1,0 +1,62 @@
+body {
+    background: #3d4869;
+    background: -moz-linear-gradient(#3d4869, #263048) fixed;
+    background: -webkit-linear-gradient(#3d4869,#263048) fixed; 
+    background: linear-gradient(#3d4869,#263048) fixed; 
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    text-shadow: 0px 0px 2px #000000;
+    color: #ffffff;
+  }
+  
+  #app {
+    background: url(images/waves.svg) no-repeat;
+    width: 520px;
+    height: 170px;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+  }
+  
+  .weather {
+    display: flex;
+  }
+
+  .weather__container-left {
+    display: flex;
+    flex-direction: column;
+  }
+  .weather__container-right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .temperature {
+    font-family: 'Vast Shadow', cursive;
+    font-size: 40px;
+  }
+  
+  .temperature__value {
+    text-align: right;
+  }
+  
+  .info {
+    display: flex;
+    padding-left: 20px;
+    position: relative;
+    top: -20px;
+  }
+
+  .info__value {
+    font-family: 'Vast Shadow', cursive;
+    align-self: center;
+  }
+  
+  .icon {
+    width: 5rem;
+    height: 5rem;
+    position: inherit;
+    top: 2px;
+    padding-left: 8px;
+  }
