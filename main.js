@@ -11,7 +11,8 @@ let weatherApp = new Vue ({
         humidity: '',
         wind: '',
         overcast: '',
-        icon: ''
+        icon: '',
+        visibility: true
     },
     methods: {
       getWeather() {
@@ -35,8 +36,15 @@ let weatherApp = new Vue ({
           console.log(error);
         })
       },
+      getCurrentTime() {
+        let date = new Date();
+        let currentHour = date.getHours();
+        if (currentHour >= 5 && currentHour <= 22) return true;
+      },
     },
     beforeMount() {
       this.getWeather();
-      }
+    },
   });
+
+  

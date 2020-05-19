@@ -15,7 +15,9 @@
                 <h1 class="location">{{name}}</h1>
                 <div class="weather">
                     <div class="weather__container-left">
-                        <img class="icon" src="images/sunny.svg"><div class="overcast">{{overcast}}</div>
+                        <img v-if="getCurrentTime()" class="icon" src="images/sunny.svg">
+                        <img v-else class="icon" src="images/night.svg">
+                        <div class="overcast">{{overcast}}</div>
                         <span class="temperature">{{currentTemp}}</span>
                     </div>
                     <div class="weather__container-right">
@@ -24,11 +26,21 @@
                     </div>
                 </div>
                 <div class="info">
-                    <img class="icon" src="images/sunrise.svg"><div class="info__value sunrise">{{sunrise}}</div> 
-                    <img class="icon" src="images/sunset.svg"><div class="info__value sunset">{{sunset}}</div> 
-                    <img class="icon" src="images/humidity.svg"><div class="info__value humidity">{{humidity}}</div> 
-                    <img class="icon" src="images/pressure.svg"><div class="info__value pressure">{{pressure}}</div> 
-                    <img class="icon" src="images/wind.svg"><div class="info__value wind">{{wind}}</div> 
+                    <div class="info__container">
+                        <img class="icon" src="images/sunrise.svg"><div class="info__value sunrise">{{sunrise}}</div>
+                    </div> 
+                    <div class="info__container">
+                        <img class="icon" src="images/sunset.svg"><div class="info__value sunset">{{sunset}}</div>
+                    </div>
+                    <div class="info__container">
+                        <img class="icon" src="images/humidity.svg"><div class="info__value humidity">{{humidity}}</div>
+                    </div> 
+                    <div class="info__container">
+                        <img class="icon" src="images/pressure.svg"><div class="info__value pressure">{{pressure}}</div>
+                    </div> 
+                    <div class="info__container"> 
+                        <img class="icon" src="images/wind.svg"><div class="info__value wind">{{wind}}</div>
+                    </div> 
                 </div>
             </div>
         </div>
