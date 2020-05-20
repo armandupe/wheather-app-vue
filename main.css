@@ -3,12 +3,13 @@ body {
     background: -moz-linear-gradient(#3d4869, #263048) fixed;
     background: -webkit-linear-gradient(#3d4869,#263048) fixed; 
     background: linear-gradient(#3d4869,#263048) fixed; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Vast Shadow', cursive;
     color: #ffffff;
   }
   
   #app {
-    width: 930px;
+    width: 980px;
+    background-image: linear-gradient( 110.9deg,  rgba(44,221,239,1) 1.1%, rgba(14,191,210,1) 37.6%, rgba(8,127,140,1) 99.2% );
   }
   
   @media (max-width: 992px) {
@@ -20,8 +21,12 @@ body {
   .app__container {
     display: flex;
     flex-direction: column;
-    border: 5px solid;
+    border: 5px inset #d6e1e3;
     padding: 1rem;
+  }
+
+  .location {
+    font-weight: normal;
   }
 
   .weather {
@@ -43,12 +48,11 @@ body {
   }
   
   .temperature {
-    font-family: 'Vast Shadow', cursive;
     font-size: 40px;
   }
   
   .temperature__value {
-    font-family: 'Vast Shadow', cursive;
+    
   }
   
   .info {
@@ -62,7 +66,6 @@ body {
   }
 
   .info__value {
-    font-family: 'Vast Shadow', cursive;
     align-self: center;
     margin: 0 0 0 1rem;
   }

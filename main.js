@@ -10,25 +10,32 @@ let weatherApp = new Vue ({
         pressure: '',
         humidity: '',
         wind: '',
-        overcast: '',
-        icon: '',
-        visibility: true
+        overcast: ''
     },
     methods: {
       getWeather() {
-        let url = "http://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=699be447d91ec1be2f59446a75e073ff";
+        const city = 'Penza';
+        const APIkey = '699be447d91ec1be2f59446a75e073ff';
+      
+        // function success(position) {
+        //   const lat  = position.coords.latitude;
+        //   const lon = position.coords.longitude;
+        // }
+        // navigator.geolocation.getCurrentPosition(success);
+       
+        let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`;
+        //let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${APIkey}`;
         axios
           .get(url)
           .then(response => {
                 this.name = response.data.name;
-                this.currentTemp = response.data.main.temp + '°';
-                this.minTemp = response.data.main.temp_min + '°';
-                this.maxTemp = response.data.main.temp_max + '°';
-                this.pressure = response.data.main.pressure  + 'mmHg';
+                this.currentTemp = response.data.main.temp + '°C';
+                this.minTemp = response.data.main.temp_min + '°C';
+                this.maxTemp = response.data.main.temp_max + '°C';
+                this.pressure = response.data.main.pressure  + ' mmHg';
                 this.humidity = response.data.main.humidity + '%';
-                this.wind = response.data.wind.speed + 'm/s';
+                this.wind = response.data.wind.speed + ' m/s';
                 this.overcast = response.data.weather[0].description;
-                this.icon = "images/" + response.data.weather[0].icon.slice(0, 2) + ".svg";
                 this.sunrise = new Date(response.data.sys.sunrise*1000).toLocaleTimeString("en-GB").slice(0,5);
                 this.sunset = new Date(response.data.sys.sunset*1000).toLocaleTimeString("en-GB").slice(0,5);
         })
@@ -42,7 +49,7 @@ let weatherApp = new Vue ({
         if (currentHour >= 5 && currentHour <= 22) return true;
       },
     },
-    beforeMount() {
+    mounted() {
       this.getWeather();
     },
   });
