@@ -10,7 +10,8 @@ let weatherApp = new Vue ({
         pressure: '',
         humidity: '',
         wind: '',
-        overcast: ''
+        overcast: '',
+        locationFound: ''
     },
     methods: {
       getWeather() {
@@ -35,7 +36,7 @@ let weatherApp = new Vue ({
                     this.sunset = new Date(res.sys.sunset*1000).toLocaleTimeString("en-GB").slice(0,5);
                   });
               }), (error) => {
-                  console.log(error);
+                  this.locationFound = 'Error';
               };
           } else {
             alert('ERROR! NO GEOLOCATION IN YOUR BROWSER!');

@@ -29,6 +29,10 @@ body {
     font-weight: normal;
   }
 
+  .locationError {
+    color: red;
+  }
+
   .weather {
     display: flex;
     margin-bottom: 2rem;
