@@ -20,7 +20,7 @@ let weatherApp = new Vue ({
             navigator.geolocation.getCurrentPosition(position => {
               lon = position.coords.longitude;
               lat = position.coords.latitude;
-              fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${APIkey}`)
+              fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${APIkey}`)
                   .then(res => {
                     return res.json();
                   }).then(res => {
