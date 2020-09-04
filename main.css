@@ -1,15 +1,17 @@
 body {
+    display: flex;
+    justify-content: center;
     background: #3d4869;
-    background: -moz-linear-gradient(#3d4869, #263048) fixed;
-    background: -webkit-linear-gradient(#3d4869,#263048) fixed; 
-    background: linear-gradient(#3d4869,#263048) fixed; 
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% ); 
     font-family: 'Vast Shadow', cursive;
     color: #ffffff;
   }
   
   #app {
     width: 980px;
-    background-image: linear-gradient( 110.9deg,  rgba(44,221,239,1) 1.1%, rgba(14,191,210,1) 37.6%, rgba(8,127,140,1) 99.2% );
+    border-radius: 10px;
+    box-shadow: 40px 30px 36px -23px rgba(0,0,0,0.75);
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,230,241,1) 0%, rgba(145,192,241,1) 45.5% );
   }
   
   @media (max-width: 992px) {
@@ -21,7 +23,6 @@ body {
   .app__container {
     display: flex;
     flex-direction: column;
-    border: 5px inset #d6e1e3;
     padding: 1rem;
   }
 
