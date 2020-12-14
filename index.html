@@ -7,23 +7,33 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="main.css" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:extra-light|Vast+Shadow" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div id="app">
             <div class="app__container">
-                <h1 class="location">{{name}}</h1>
+                <div class="app__header-container">
+                    <h1 class="location">{{name}}</h1>
+                    <!-- <img v-if="getCurrentTime()" class="icon" src="images/sunny.svg">
+                    <img v-else class="icon" src="images/night.svg"> -->
+                </div>
+                <div class="weather__overcast-container">
+                    <div class="weather__overcast">{{overcast}}</div>
+                    <img class="weather__overcast-image" src="" alt="overcast icon">
+                </div>
+                <form class="input-form">
+                    <input class="input-city" type="text" placeholder="Введите город">
+                    <button class="btn">{{cityMsg}}</button>
+                </form>
                 <h2 class="locationError" v-if="locationFound != ''">{{locationFound}}</h2>
                 <div class="weather">
                     <div class="weather__container-left">
-                        <img v-if="getCurrentTime()" class="icon" src="images/sunny.svg">
-                        <img v-else class="icon" src="images/night.svg">
-                        <div class="overcast">{{overcast}}</div>
                         <span class="temperature">{{currentTemp}}</span>
-                    </div>
-                    <div class="weather__container-right">
-                        <span class="temperature__value">Min {{minTemp}}</span>
-                        <span class="temperature__value">Max {{maxTemp}}</span>
+                        <div class="weather__min-max-temp-container">
+                            <span class="weather__min-temp">Min {{minTemp}}</span>
+                            <span class="weather__max-temp">Max {{maxTemp}}</span>
+                        </div>
                     </div>
                 </div>
                 <div class="info">
