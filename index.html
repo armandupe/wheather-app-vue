@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Wheather-app</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="main.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet"> 
-    </head>
-    <body>
-        <div id="app">
-            <div class="app__container">
-                <div class="app__header-container">
-                    <h1 class="location">{{name}}</h1>
-                    <!-- <img v-if="getCurrentTime()" class="icon" src="images/sunny.svg">
-                    <img v-else class="icon" src="images/night.svg"> -->
-                </div>
-                <div class="weather__overcast-container">
-                    <div class="weather__overcast">{{overcast}}</div>
-                    <img class="weather__overcast-image" src="" alt="overcast icon">
-                </div>
-                <form class="input-form">
-                    <input class="input-city" type="text" placeholder="Введите город">
-                    <button class="btn">{{cityMsg}}</button>
-                </form>
-                <h2 class="locationError" v-if="locationFound != ''">{{locationFound}}</h2>
-                <div class="weather">
-                    <div class="weather__container-left">
-                        <span class="temperature">{{currentTemp}}</span>
-                        <div class="weather__min-max-temp-container">
-                            <span class="weather__min-temp">Min {{minTemp}}</span>
-                            <span class="weather__max-temp">Max {{maxTemp}}</span>
-                        </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wheather-app</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div class="app__container">
+            <div class="app__header-container">
+                <h1 class="location">{{name}}</h1>
+            </div>
+            <div class="weather__overcast-container">
+                <div class="weather__overcast">{{overcast}}</div>
+                <img class="weather__overcast-image" src="" alt="overcast icon">
+            </div>
+            <form class="input-form">
+                <input class="input-city" type="text" placeholder="Введите город">
+                <button class="btn hidden">{{cityMsg}}</button>
+            </form>
+            <h2 class="locationError" v-if="locationFound != ''">{{locationFound}}</h2>
+            <div class="weather">
+                <div class="weather__container-left">
+                    <span class="temperature">{{currentTemp}}</span>
+                    <div class="weather__min-max-temp-container">
+                        <span class="weather__min-temp">Min {{minTemp}}</span>
+                        <span class="weather__max-temp">Max {{maxTemp}}</span>
                     </div>
                 </div>
-                <div class="info">
-                    <div class="info__container">
-                        <img class="icon" src="images/sunrise.svg"><div class="info__value sunrise">{{sunrise}}</div>
-                    </div> 
-                    <div class="info__container">
-                        <img class="icon" src="images/sunset.svg"><div class="info__value sunset">{{sunset}}</div>
-                    </div>
-                    <div class="info__container">
-                        <img class="icon" src="images/humidity.svg"><div class="info__value humidity">{{humidity}}</div>
-                    </div> 
-                    <div class="info__container">
-                        <img class="icon" src="images/pressure.svg"><div class="info__value pressure">{{pressure}}</div>
-                    </div> 
-                    <div class="info__container"> 
-                        <img class="icon" src="images/wind.svg"><div class="info__value wind">{{wind}}</div>
-                    </div> 
+            </div>
+            <div class="info">
+                <div class="info__container">
+                    <img class="icon" src="images/sunrise.svg">
+                    <div class="info__value sunrise">{{sunrise}}</div>
+                </div>
+                <div class="info__container">
+                    <img class="icon" src="images/sunset.svg">
+                    <div class="info__value sunset">{{sunset}}</div>
+                </div>
+                <div class="info__container">
+                    <img class="icon" src="images/humidity.svg">
+                    <div class="info__value humidity">{{humidity}}</div>
+                </div>
+                <div class="info__container">
+                    <img class="icon" src="images/pressure.svg">
+                    <div class="info__value pressure">{{pressure}}</div>
+                </div>
+                <div class="info__container">
+                    <img class="icon" src="images/wind.svg">
+                    <div class="info__value wind">{{wind}}</div>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="main.js"></script>
-    </body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
