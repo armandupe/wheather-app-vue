@@ -1,3 +1,3 @@
-Weather App: Using Vue and Fetch API
+Weather App (Vue и Fetch API)
 
 
