@@ -7,7 +7,7 @@ body {
     rgba(234, 249, 249, 0.67) 0.1%,
     rgba(239, 249, 251, 0.63) 90.1%
   );
-  font-family: "Oswald", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ffffff;
 }
 
@@ -46,7 +46,8 @@ body {
 }
 
 .locationError {
-  color: red;
+  color: #d13131;
+  font-weight: bold;
   padding: 0.5rem 0;
 }
 
@@ -70,7 +71,7 @@ body {
 }
 
 .input-error {
-  box-shadow: 1px 1px 7px 2px inset red;
+  box-shadow: 1px 1px 7px 2px inset #fbb0b0;
 }
 
 .btn {
