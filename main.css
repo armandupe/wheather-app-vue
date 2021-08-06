@@ -109,7 +109,7 @@ body {
   box-shadow: 1px 1px 7px 2px inset #fbb0b0;
 }
 
-.btn {
+.form__btn {
   border: 1px solid azure;
   padding: 0.5rem;
   border-radius: 10px;
@@ -120,12 +120,12 @@ body {
   font-size: 1rem;
 }
 
-.btn:hover {
+.form__btn:hover {
   background-color: antiquewhite;
   cursor: pointer;
 }
 
-.btn:active {
+.form__btn:active {
   background-color: blanchedalmond;
   box-shadow: 1px 1px 7px 2px inset darkgoldenrod;
 }

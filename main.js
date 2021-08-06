@@ -98,7 +98,7 @@ let weatherApp = new Vue({
       }
     };
 
-    const btn = document.querySelector(".btn");
+    const btn = document.querySelector(".form__btn");
     btn.addEventListener("click", getWeatherByCity);
 
     const cityInput = document.querySelector(".form__city");
