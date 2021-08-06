@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,53 +15,56 @@
   </head>
 
   <body>
-    <div id="app">
+    <section class="hidden" id="modal">
+      <p>Введите правильное название или код города</p>
+    </section>
+    <main id="app">
       <div class="app__container">
-        <div class="app__header-container">
-          <h1 class="location">{{name}}</h1>
-        </div>
-        <div class="weather__overcast-container">
-          <div class="weather__overcast">{{overcast}}</div>
-          <img class="weather__overcast-image" src="" alt="overcast icon" />
-        </div>
-        <form class="input-form">
-          <input class="input-city" type="text" placeholder="Введите город" />
+        <header class="header">
+          <h1 class="header__location">{{name}}</h1>
+        </header>
+        <section class="weather-overcast">
+          <div class="weather-overcast__descr">{{overcast}}</div>
+          <img class="weather-overcast__image" src="" alt="иконка прогноза погоды" />
+        </section>
+        <form class="form">
+          <input class="form__city" type="text" required placeholder="Введите город" />
           <button class="btn hidden">{{cityMsg}}</button>
         </form>
-        <h2 class="locationError" v-if="locationFound != ''">{{locationFound}}</h2>
-        <div class="weather">
-          <div class="weather__container-left">
+        <section class="locationError" v-if="locationFound != ''">{{locationFound}}</section>
+        <section class="weather">
+          <div class="weather__container">
             <span class="temperature">{{currentTemp}}</span>
-            <div class="weather__min-max-temp-container">
-              <span class="weather__min-temp">Min {{minTemp}}</span>
-              <span class="weather__max-temp">Max {{maxTemp}}</span>
+            <div class="temperature-range">
+              <span class="temperature-range__min">{{minTemp}}</span>
+              <span class="temperature-range__max">{{maxTemp}}</span>
             </div>
           </div>
-        </div>
-        <div class="info">
-          <div class="info__container">
-            <img class="icon" src="images/sunrise.svg" />
-            <div class="info__value sunrise">{{sunrise}}</div>
+        </section>
+        <section class="weather-info">
+          <div class="weather-info__container">
+            <img class="weather-info__icon" src="images/sunrise.svg" alt="рассвет" />
+            <div class="weather-info__descr">{{sunrise}}</div>
           </div>
-          <div class="info__container">
-            <img class="icon" src="images/sunset.svg" />
-            <div class="info__value sunset">{{sunset}}</div>
+          <div class="weather-info__container">
+            <img class="weather-info__icon" src="images/sunset.svg" alt="закат" />
+            <div class="weather-info__descr">{{sunset}}</div>
           </div>
-          <div class="info__container">
-            <img class="icon" src="images/humidity.svg" />
-            <div class="info__value humidity">{{humidity}}</div>
+          <div class="weather-info__container">
+            <img class="weather-info__icon" src="images/humidity.svg" alt="влажность" />
+            <div class="weather-info__descr">{{humidity}}</div>
           </div>
-          <div class="info__container">
-            <img class="icon" src="images/pressure.svg" />
-            <div class="info__value pressure">{{pressure}}</div>
+          <div class="weather-info__container">
+            <img class="weather-info__icon" src="images/pressure.svg" alt="давление" />
+            <div class="weather-info__descr">{{pressure}}</div>
           </div>
-          <div class="info__container">
-            <img class="icon" src="images/wind.svg" />
-            <div class="info__value wind">{{wind}}</div>
+          <div class="weather-info__container">
+            <img class="weather-info__icon" src="images/wind.svg" alt="ветер" />
+            <div class="weather-info__descr">{{wind}}</div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>
   </body>
